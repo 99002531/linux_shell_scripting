@@ -33,15 +33,6 @@ while IFS=, read NAME EMAIL REPO; do
             printf "CLONE FAILED,">>$RESULT
             echo "CLONE FAILURE"
         fi 
-        : '
-        elif [[ "$Repo" != "Repo link" ]]
-        then
-            printf "Failed", >> $RESULT
-            printf "Failed", >> $RESULT
-            printf "Failed", >> $RESULT
-            printf "Failed\n" >> $RESULT        
-            #echo "Failed"
-        fi'
         cppcheck "$DIRCT"
         if [[ $? -eq 0 && "$Name" != "Name" ]]
         then
